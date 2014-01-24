@@ -1,10 +1,36 @@
 {
-  "name": "editor",
-  "version": "0.0.0",
-  "description": "",
   "main": "index.html",
-  "scripts": {
+  "name": "editor",
+  "description": "demo app of node-webkit",
+  "version": "0.1.0",
+  "keywords": [
+    "demo",
+    "node-webkit"
+  ],
+  "window": {
+    "title": "node-webkit demo",
+    "icon": "link.png",
+    "toolbar": true,
+    "frame": true,
+    "width": 800,
+    "height": 500,
+    "position": "mouse",
+    "min_width": 400,
+    "min_height": 200,
+    "max_width": 800,
+    "max_height": 600
   },
-  "author": "",
-  "license": "BSD-2-Clause"
+  "webkit": {
+    "plugin": true
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-node-webkit-builder": "~0.1.16",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-bower-concat": "~0.2.4",
+    "grunt-este-watch": "~0.1.15",
+    "grunt-contrib-coffee": "~0.8.2"
+  }
 }
