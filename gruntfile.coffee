@@ -22,20 +22,17 @@ module.exports = (grunt) ->
         linux32: false
         linux64: false
       src: [
-        './index.html'
-        './package.json'
-        './gen/**/*'
-        './node_modules/**/*'
+        './app/**/*'
         ]
     concat:
       css:
         options: {}
         src: ['bower_components/codemirror/lib/codemirror.css']
-        dest: 'gen/all.css'
+        dest: 'app/all.css'
     coffee:
       src:
         files:
-          'gen/all.js': ['src/**/*']
+          'app/all.js': ['src/**/*']
 
     esteWatch:
       options:

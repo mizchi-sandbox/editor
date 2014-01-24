@@ -5,7 +5,8 @@
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -34,6 +35,5 @@ build
 .grunt
 
 node_modules
+app/node_modules
 bower_components
-
-

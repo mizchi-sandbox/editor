@@ -1,12 +1,14 @@
 {
+  "main": "index.html",
   "name": "editor",
+  "description": "editor",
   "version": "0.0.0",
   "keywords": [
     "editor",
     "node-webkit"
   ],
   "window": {
-    "title": "editor",
+    "title": "Editor",
     "icon": "link.png",
     "toolbar": true,
     "frame": true,
@@ -22,13 +24,7 @@
     "plugin": true
   },
   "dependencies": {
+    "glob": "~3.2.8"
   },
-  "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-node-webkit-builder": "~0.1.16",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-bower-concat": "~0.2.4",
-    "grunt-este-watch": "~0.1.15",
-    "grunt-contrib-coffee": "~0.8.2"
-  }
+  "devDependencies": {}
 }
