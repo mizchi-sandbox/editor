@@ -1,0 +1,11 @@
+{
+  "name": "editor",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "run": "nw ."
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}
