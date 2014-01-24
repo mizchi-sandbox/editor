@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "run": "nw ."
   },
   "author": "",
   "license": "BSD-2-Clause"
