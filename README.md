@@ -7,4 +7,7 @@ This is an example of node-webkit and codemirror build yet.
 ```
 bower install
 npm install
+grunt build
 ```
+
+open `build/releases/editor/mac/editor.app`
