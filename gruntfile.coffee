@@ -7,7 +7,7 @@ module.exports = (grunt) ->
   grunt.initConfig
     bower_concat:
       all:
-        dest: 'gen/vendor.js'
+        dest: 'app/vendor.js'
         exclude: []
         dependencies:
           'horn': 'jquery'
@@ -21,14 +21,22 @@ module.exports = (grunt) ->
         win: false
         linux32: false
         linux64: false
-      src: [
-        './app/**/*'
-        ]
+      src: ['./app/**/*']
+
     concat:
+      'codemirror-plugins':
+        options: {}
+        src: [
+          'bower_components/codemirror/keymap/vim.js'
+          'bower_components/codemirror/keymap/emacs.js'
+        ]
+        dest: 'app/codemirror-plugins.js'
+
       css:
         options: {}
         src: ['bower_components/codemirror/lib/codemirror.css']
-        dest: 'app/all.css'
+        dest: 'app/vendor.css'
+
     coffee:
       src:
         files:
@@ -38,4 +46,12 @@ module.exports = (grunt) ->
       options:
         dirs: [ "src/**/*"]
       'coffee': (fpath) ->
-        ['coffee:src']
+        ['coffee:src', 'nodewebkit']
+
+  grunt.registerTask 'build', [
+    'bower_concat',
+    'coffee:src',
+    'concat:css',
+    'concat:codemirror-plugins'
+  ]
+  grunt.registerTask 'default', ['build', 'esteWatch']

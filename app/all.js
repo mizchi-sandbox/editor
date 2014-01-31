@@ -3,7 +3,8 @@
     var myTextarea;
     myTextarea = document.querySelector('textarea');
     return CodeMirror.fromTextArea(myTextarea, {
-      mode: "text/html"
+      mode: "text/html",
+      keyMap: 'vim'
     });
   };
 
